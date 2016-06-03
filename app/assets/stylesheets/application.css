@@ -1,0 +1,70 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body{
+  border: solid black;
+}
+
+img{
+  height: 100px;
+  width: 100px;
+}
+
+
+.visitedCities{
+  background-color: rgba(75, 75, 245, 0.5);
+  height: 360px;
+  width: 360px;
+  display: inline-block;
+  margin: 1em;
+  padding: .5em;
+  box-shadow: 4px 4px 8px black;
+  overflow: scroll;
+
+
+}
+
+
+.notVisitedCities{
+  background-color: rgba(245, 192, 34, 0.5);
+  height: 360px;
+  width: 360px;
+  display: inline-block;
+  margin: 1em;
+  padding: .5em;
+  overflow: scroll;
+  box-shadow: 4px 4px 8px black;
+
+}
+
+.background{
+background-image: url('https://wallpaperscraft.com/image/city_square_gray_59107_1920x1080.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+
+.form{
+  font-family: 'Play', sans-serif;
+  padding: 1em;
+  height: 200px;
+  width: 350px;
+  margin-left: 35%;
+  text-align: center;
+  font-size: 1.3em;
+
+}

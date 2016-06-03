@@ -1,0 +1,39 @@
+
+<div class="background" ng-controller="NewCityController">
+
+<%= render partial: "basicform" %>
+
+
+
+      <div class="visitedCities" ng-hide="visitVar" ng-repeat="city in savedCities | filter: {visited: true}">
+        <h3>City Name: {{city.name}}</h3>
+        <h4>Country: {{city.country}}</h4>
+        <h4><img ng-src="{{city.image}}" alt="" /></h4>
+        <h4>Best Food: {{city.food}}</h4>
+        <h4>Best Nightlife: {{city.nightlife}}</h4>
+        <h4>Sights to see: {{city.attractions}}</h4>
+        <h4>{{city.visited}}</h4>
+        <button type="button" name="button" ng-click="edit = !edit">Edit</button>
+        <button type="button" name="button" ng-click="removeCity(city)">Delete</button>
+        <div class="editform" ng-show="edit">
+          <%= render partial: "editform" %>
+        </div>
+      </div>
+      <br>
+      <div class="notVisitedCities" ng-repeat="city in savedCities | filter: {visited: false}" ng-show="visitVar">
+        <h3>City Name: {{city.name}}</h3>
+        <h4>Country: {{city.country}}</h4>
+        <h4><img ng-src="{{city.image}}" alt="" /></h4>
+        <h4>Best Food: {{city.food}}</h4>
+        <h4>Best Nightlife: {{city.nightlife}}</h4>
+        <h4>Sights to see: {{city.attractions}}</h4>
+        <h4>{{city.visited}}</h4>
+        <button type="button" name="button" ng-click="edit = !edit">Edit</button>
+        <button type="button" name="button" ng-click="removeCity(city)">Delete</button>
+        <div class="editform" ng-show="edit">
+          <%= render partial: "editform" %>
+        </div>
+      </div>
+
+
+</div>
